@@ -1,4 +1,4 @@
-package br.com.programinhas.desafio_java_1;
+package br.com.programinhas.desafio_java_3;
 
 public class Desafio {
     
