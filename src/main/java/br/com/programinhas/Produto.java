@@ -13,7 +13,10 @@ public class Produto {
     }
 
     public double calcularTotal(){
-        return this.preco * this.quantidade;
+        if(this.preco > 0 && this.quantidade > 0){
+            return this.preco * this.quantidade;
+        }
+        throw new RuntimeException("O preço e quantidade não podem ser negativos");
     }
 
     
