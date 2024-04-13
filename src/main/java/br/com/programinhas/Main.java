@@ -6,12 +6,12 @@ public class Main {
         long tempoInicial = System.currentTimeMillis();
         System.out.println();
 
-        String stringNormal = "";
+        StringBuilder stringBuilder = new StringBuilder();
         for(int i = 0; i < 100_000; i++){
-            stringNormal += i + ", ";
+            stringBuilder.append(i + ", ");
         }
 
-        System.out.println(stringNormal);
+        System.out.println(stringBuilder.toString());
         long tempoFinal = System.currentTimeMillis();
         System.out.println("Tempo total: " + (tempoFinal - tempoInicial));
     }
