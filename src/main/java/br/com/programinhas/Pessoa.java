@@ -2,43 +2,56 @@ package br.com.programinhas;
 
 public class Pessoa {
 
-    private Nome nome;
+    private int id;
+    private String nome;
     private int idade;
-    private String estadoOrigem;
-
-    public Pessoa(Nome nome, int idade, String estadoOrigem) {
-        this.nome = nome;
-        this.idade = idade;
-        this.estadoOrigem = estadoOrigem;
+    private Endereco endereco;
+    
+    public Pessoa() {
     }
 
-    public Nome getNome() {
+    public Pessoa(int id, String nome, int idade, Endereco endereco) {
+        this.id = id;
+        this.nome = nome;
+        this.idade = idade;
+        this.endereco = endereco;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNome() {
         return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public int getIdade() {
         return idade;
     }
 
-    public String getEstadoOrigem() {
-        return estadoOrigem;
-    }
-
-    public void setNome(Nome nome) {
-        this.nome = nome;
-    }
-
     public void setIdade(int idade) {
         this.idade = idade;
     }
 
-    public void setEstadoOrigem(String estadoOrigem) {
-        this.estadoOrigem = estadoOrigem;
+    public Endereco getEndereco() {
+        return endereco;
     }
-    
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
     @Override
     public String toString() {
-        return "Pessoa [nome=" + nome + ", idade=" + idade + ", estadoOrigem=" + estadoOrigem + "]";
+        return "Pessoa [id=" + id + ", nome=" + nome + ", idade=" + idade + ", endereco=" + endereco + "]";
     }
 
 }
