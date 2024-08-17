@@ -1,18 +1,26 @@
 package br.com.programinhas;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
+       
+        //duas pessoas com nomes iguais
+        Nome nome = new Nome("João", "de Santo Cristo");
+        Pessoa pessoa1 = new Pessoa(nome, 25, "MG");
+        Pessoa pessoa2 = new Pessoa(nome, 35, "CE");
 
-        long tempoInicial = System.currentTimeMillis();
         System.out.println();
+        System.out.println(pessoa1);
+        System.out.println();
+        System.out.println(pessoa2);
 
-        StringBuilder stringBuilder = new StringBuilder();
-        for(int i = 0; i < 100_000; i++){
-            stringBuilder.append(i + ", ");
-        }
+        nome = new Nome("João", "de Santo Cristo Sagrado");
+        pessoa2.setNome(nome);
+        
+        System.out.println();
+        System.out.println(pessoa1);
+        System.out.println();
+        System.out.println(pessoa2);
 
-        System.out.println(stringBuilder.toString());
-        long tempoFinal = System.currentTimeMillis();
-        System.out.println("Tempo total: " + (tempoFinal - tempoInicial));
+     
     }
 }
